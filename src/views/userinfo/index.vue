@@ -80,6 +80,22 @@ import type { FormInstance, FormRules } from 'element-plus'
 import { validatePassword } from '@/utils/util'
 import { changePasswordApi } from '@/api/modules/login';
 
+import * as signalR from "@microsoft/signalr";
+
+let hubUrl = "https://localhost:7067/hub";
+//.net core 版本中默认不会自动重连，需手动调用 withAutomaticReconnect 
+const connection = new signalR.HubConnectionBuilder()
+      .withAutomaticReconnect()//断线自动重连
+      .withUrl(hubUrl)//传递参数Query["access_token"]
+      .build();
+
+connection.start()
+.then(() => console.log('Connected!!!!!'))
+.catch(err => console.error(err));
+
+connection.serverTimeoutInMilliseconds = 24e4; 
+connection.keepAliveIntervalInMilliseconds = 12e4;
+
 const globalStore = GlobalStore();
 const userInfo = globalStore.userInfo;
 const avatar2 = ref('')

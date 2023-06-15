@@ -33,10 +33,10 @@
       <el-form-item label="公告标题" prop="noticeTitle">
         <el-input v-model="addNoticeForm.noticeTitle" />
       </el-form-item>
-      <el-form-item label="发布时间" prop="publishTime">
+      <!-- <el-form-item label="发布时间" prop="publishTime">
         <el-date-picker v-model="addNoticeForm.publishTime" type="date" placeholder="选择日期" value-format="YYYY-MM-DD"
           format="YYYY-MM-DD" />
-      </el-form-item>
+      </el-form-item> -->
       <el-form-item label="课程序号" prop="courseId">
         <el-input v-model="addNoticeForm.courseId" disabled />
       </el-form-item>

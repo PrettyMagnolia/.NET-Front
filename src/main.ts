@@ -31,11 +31,11 @@ import pinia from "@/stores/index";
 // svg icons
 import "virtual:svg-icons-register";
 // errorHandler
-import errorHandler from "@/utils/errorHandler";
+//import errorHandler from "@/utils/errorHandler";
 
 const app = createApp(App);
 
-app.config.errorHandler = errorHandler;
+//app.config.errorHandler = errorHandler;
 
 // 注册element Icons组件
 Object.keys(Icons).forEach(key => {

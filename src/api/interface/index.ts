@@ -1,4 +1,5 @@
 import { UserInfo } from "@/stores/interface";
+import { DatetimeFormatProps } from "vue-i18n";
 
 // * 请求响应参数(不包含data)
 export interface Result {
@@ -189,5 +190,15 @@ export namespace Score {
 		studentName: string,
 		totalScore: number,
 		scoreList: SingleExperimentScore[]
+	}
+}
+
+//消息模块
+export namespace Message {
+	export interface MessageList {
+		messageId: number,
+		content: string,
+		createTime: string,
+		isView: boolean
 	}
 }

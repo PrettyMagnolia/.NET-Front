@@ -7,7 +7,7 @@
 	},
 	"files.eol": "\n",
 	"[vue]": {
-		"editor.defaultFormatter": "Vue.volar"
+		"editor.defaultFormatter": "octref.vetur"
 	},
 	"[typescript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"

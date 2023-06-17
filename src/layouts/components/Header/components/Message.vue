@@ -40,7 +40,9 @@ import * as signalR from "@microsoft/signalr";
 const activeName = ref("first");
 const messageList = ref<Message.MessageList[]>([]);
 
-let hubUrl = "https://localhost:7067/hub";
+// let hubUrl = "https://localhost:7067/hub";
+// let hubUrl = "http://47.113.230.127:5000/hub";
+let hubUrl = "http://localhost:5000/hub";
 
 onMounted(() => {
   //.net core 版本中默认不会自动重连，需手动调用 withAutomaticReconnect

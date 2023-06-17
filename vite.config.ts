@@ -45,7 +45,7 @@ export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
 				"/api": {
 					// target: "https://mock.mengxuegu.com/mock/629d727e6163854a32e8307e", // easymock
 					// target: "https://www.fastmock.site/mock/f81e8333c1a9276214bcdbc170d9e0a0", // fastmock
-					target: "https://localhost:7067",
+					target: "http://localhost:5000",
 					changeOrigin: true,
 					secure: false,
 					rewrite: path => path.replace(/^\/api/, "")

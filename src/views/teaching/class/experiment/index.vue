@@ -441,8 +441,8 @@ const confirmUpload = () => {
           e.startTime = dateFormat(e.startTime);
           e.endTime = dateFormat(e.endTime);
         });
-
         dialogTableVisible.value = false;
+        showExperimentList.value = experimentList.value.slice(0 + pageSize.value * (currentPage.value - 1), pageSize.value + pageSize.value * (currentPage.value - 1));
       })
     })
     .catch(err => {

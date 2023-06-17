@@ -173,6 +173,7 @@ const login = (formEl: FormInstance | undefined) => {
 			if (success == false) {
 				ElMessage({ message: "初次登录，须修改密码，验证码已发送至邮箱", type: "warning" })
 				isActived.value = false;
+				console.log(isActived.value);
 				return;
 			}
 			globalStore.setToken(data.token);
@@ -197,7 +198,12 @@ const login = (formEl: FormInstance | undefined) => {
 				type: "success",
 				duration: 3000
 			});
-		} finally {
+		
+		} 
+		catch (err){
+			console.log("err")
+			console.log(err);
+		}finally {
 			loading.value = false;
 		}
 	});
